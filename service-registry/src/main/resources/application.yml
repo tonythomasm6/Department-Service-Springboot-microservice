@@ -1,0 +1,7 @@
+server:
+  port: 8761   #Default eureka port (No need to configure)
+
+eureka:
+  client:
+    register-with-eureka: false   #This is server-hence no need to register itself.
+    fetch-registry: false  # Dont have to fetch registry to get details of registered microservices.

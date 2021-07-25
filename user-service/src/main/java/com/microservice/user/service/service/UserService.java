@@ -29,7 +29,9 @@ public class UserService {
             ResponseTemplateVO vo = new ResponseTemplateVO();
             User user = userRepostory.findByUserId(userId);
             //To get department for the user, we need to make API call to the department API using rest template
-        Department department = restTemplate.getForObject("http://localhost:9001/departments/"+user.getDepartmentId(), Department.class);
+//        Department department = restTemplate.getForObject("http://localhost:9001/departments/"+user.getDepartmentId(), Department.class);
+        /*After registering the client with eureka, the url can be changed to application name*/
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/"+user.getDepartmentId(), Department.class);
         vo.setUser(user);
         vo.setDepartment(department);
         return vo;

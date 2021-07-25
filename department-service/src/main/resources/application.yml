@@ -1,2 +1,15 @@
 server:
   port: 9001
+
+spring:
+  application:
+    name: DEPARTMENT-SERVICE #Name of this micro service
+
+eureka:
+  client:
+    register-with-eureka: true  #Need to register with eureka
+    fetch-registry: true #Have to fetch microservices details from registry
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ #eureka server url
+  instance:
+    hostname: localhost
