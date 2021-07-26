@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<a th:href="${'/departments/addDepartment'}">Add department</a>
+<a th:href="${'/'}">Home</a>
+<div th:if="${not #lists.isEmpty(allDepartments)}">
+    <table border="1">
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee First Name</th>
+            <th>Employee Last Name</th>
+            <th>Employee Office Location</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+
+        <tr th:each="department : ${allDepartments}">
+            <td th:text="${department.departmentId}"></td>
+            <td th:text="${department.departmentName}"></td>
+            <td th:text="${department.departmentAddress}"></td>
+            <td th:text="${department.departmentCode}"></td>
+<!--            <td><a th:href="${'/employee/delete/'+employee.employeeId}">Delete</a> </td>-->
+<!--            <td><a th:href="${'/employee/update/'+employee.employeeId}">Update</a> </td>-->
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>

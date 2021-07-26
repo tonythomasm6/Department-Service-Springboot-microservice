@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Department</title>
+</head>
+<body>
+
+<form th:object="${department}" th:action="${'department/'}" th:method="post">
+    <label for="departmentId">Department Id</label>
+    <input id="departmentId" type="text" th:field="*{departmentId}">
+    <br>
+    <label for="departmentName">Department Name</label>
+    <input id="departmentName" type="text" th:field="*{departmentName}">
+    <br>
+    <label for="departmentAddress">Department Address</label>
+    <input id="departmentAddress" type="text" th:field="*{departmentAddress}">
+    <br>
+    <label for="departmentCode">Department Code</label>
+    <input id="departmentCode" type="text" th:field="*{departmentCode}">
+    <br>
+    <button>Submit</button>
+</form>
+</body>
+</html>

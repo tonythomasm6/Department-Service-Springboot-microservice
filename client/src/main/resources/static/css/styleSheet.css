@@ -1,0 +1,38 @@
+
+
+body {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.department {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: 2rem;
+    font-family: "-webkit-pictograph";
+    font-weight: 700;
+    display: flex;
+    /* justify-content: center; */
+
+    align-items: center;
+    text-align: center;
+    /* padding-top: 50px; */
+    /* text-align: center; */
+}
+
+/* .users {
+  width: 14rem;
+  height: 14rem;
+  background-color: blue;
+} */

@@ -1,0 +1,43 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User List</title>
+</head>
+<body>
+
+
+
+
+<a th:href="${'/users/addUser'}">Add User</a>
+<a th:href="${'/'}">Home</a>
+<div th:if="${not #lists.isEmpty(allUsers)}">
+    <table border="1">
+        <tr>
+            <th>User Id</th>
+            <th>User First Name</th>
+            <th>User Last Name</th>
+            <th>User Email</th>
+            <th>User Department Id</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+
+        <tr th:each="user : ${allUsers}">
+            <td th:text="${user.userId}"></td>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.departmentId}"></td>
+            <!--            <td><a th:href="${'/employee/delete/'+employee.employeeId}">Delete</a> </td>-->
+            <!--            <td><a th:href="${'/employee/update/'+employee.employeeId}">Update</a> </td>-->
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
